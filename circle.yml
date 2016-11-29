@@ -1,0 +1,11 @@
+dependencies:
+    override:
+        - bundle install
+        - sudo pip install awscli
+
+deployment:
+    aws:
+        branch: master
+        commands:
+            - jekyll build
+            - aws s3 sync _site/ s3://joe8bit.com/ --delete --acl public-read
