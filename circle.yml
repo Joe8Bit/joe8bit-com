@@ -8,4 +8,4 @@ deployment:
         branch: master
         commands:
             - jekyll build
-            - aws s3 sync _site/ s3://joe8bit.com/ --delete --acl public-read
+            - aws s3 sync _site/ s3://v2.joe8bit.com/ --delete --acl public-read
